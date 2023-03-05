@@ -17,12 +17,9 @@
                                               |___/                                                                     
 */
 const tips = [
-    'Modify Inc&#173;ogni&#173;tos appearance & browser tab in <a href="#settings">settings.</a>',
-    'You can enable about:blank tab cloaking in <a href="#settings">settings.</a>',
-    'Access popular media & sites easily in <a href="#apps">apps.</a>',
-    'Lit!!!',
-    'Join the <a href="#community">As&#173;t&#173;ral Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>',
-    'Get answers to questions in <a href="#support">support</a>'
+    'Access popular sites easily in <a href="#apps">apps.</a>',
+    'Be safe!',
+     'Do not be stupid (important)'
 ];
 
 
@@ -42,16 +39,8 @@ function access(app) {
     app.nav.target.style.removeProperty('display');
     document.querySelector('#open-nav').setAttribute('data-open', '');
     app.search.input.focus();
-
-
-    
-    app.nav.community = app.createLink('#community', 'Community');
-    app.nav.support = app.createLink('#support', 'Support');
     app.nav.apps = app.createLink('#apps', 'Apps');
    
-    app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
-        id: 'apps'
-    })
     if(localStorage.getItem('incog||disabletips') !== 'none') app.main.tip = app.createElement('div', tips[Math.floor(Math.random()*tips.length)], { class: 'tip' });
 
     app.main.suggestions = app.createElement('div', [], {
