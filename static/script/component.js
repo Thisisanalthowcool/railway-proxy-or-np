@@ -34,6 +34,7 @@ function createComponent(element) {
                 target[prop].remove();
                 delete target[prop];
             };
+            element.append(val);
 
             target[prop] = val
 
