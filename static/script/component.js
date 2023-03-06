@@ -35,7 +35,6 @@ function createComponent(element) {
                 delete target[prop];
             };
 
-            element.append(val);
             target[prop] = val
 
             return true;
