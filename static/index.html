@@ -108,10 +108,11 @@
     </body>
 </html>
 <script>
- document.onload() => {
-     document.querySelector("input").oninput() => {
-          base64 = btoa(unescape(encodeURIComponent(document.querySelector("input").value)));
-          window.location = "./load.html#" + base64;
-      }
- }
+window.addEventListener('load', function() {
+  document.querySelector('input').addEventListener('input', function() {
+    var base64 = btoa(unescape(encodeURIComponent(this.value)));
+    window.location = './load.html#' + base64;
+  });
+});
+
 </script>
